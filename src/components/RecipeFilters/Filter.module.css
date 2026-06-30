@@ -1,0 +1,9 @@
+:global([role="option"][aria-level="2"]) {
+  padding-inline-start: 3rem !important;
+}
+:global([role="option"][aria-level="3"]) {
+  padding-inline-start: 5rem !important;
+}
+:global([role="option"][aria-level="4"]) {
+  padding-inline-start: 7rem !important;
+}

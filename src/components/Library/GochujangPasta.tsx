@@ -1,0 +1,56 @@
+import { Recipe } from "../RecipeFilters/Types";
+
+export const gochujangPasta: Recipe = {
+  path: "/gochujang-pasta",
+  originalLink: "https://www.mealofjoy.com/p/sausage-gochujang-pasta",
+  image:
+    "https://substackcdn.com/image/fetch/$s_!I9KH!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb65a86b1-15e6-4b19-90ce-74f833391e7f_3024x3442.jpeg",
+  imageAlt: "",
+  title: "Sausage gochujang pasta",
+  time: "1 hr",
+  description: "",
+  serves: 4,
+  ingredients: [
+    [400, "g pasta (rigatoni or any short pasta)"],
+    [6, " high-quality sausages (about 320g)"],
+    [30, "g butter"],
+    [1, " shallot"],
+    [3, " garlic cloves"],
+    [2, " tbsp gochujang paste"],
+    [220, "ml cream"],
+    [2, " limes"],
+    [2, " tbsp honey"],
+    [30, "g coriander"],
+    [15, "g panko breadcrumbs"],
+    [40, "g parmesan"],
+    [1, " pinch of salt"],
+    [1, " pinch of pepper"],
+    [1, " splash of olive oil"],
+  ],
+  method: [
+    "Remove the casing from the sausages and fry them in a pan or wok with a little oil over medium-high heat until they are golden brown. Remove from the pan and set aside.",
+    "Add the butter, and when it starts to melt, add the shallot and garlic. Sauté for a couple of minutes until softened, then add the gochujang and cream.",
+    "Stir in 30g of Parmesan cheese, the juice of two limes, and the honey. Let it simmer for about 3 minutes, then put the crispy sausage pieces back in. Stir everything well and let it simmer a bit more until it thickens slightly. Season with salt and pepper to taste.",
+    "Cook the pasta. Once it's al dente, drain it and save a little bit of the cooking water. Add a small ladle of the cooking water to your pan and mix until the sauce becomes glossy. Keep tasting and add more water if needed.",
+    "Add almost all the chopped cilantro to the pasta and mix, reserving some for the topping.",
+    "Heat a tablespoon of olive oil in a pan and toast the panko breadcrumbs. Remove from heat, let cool slightly, grate 10g of Parmesan over it, and mix in the remaining chopped cilantro.",
+    "Plate the pasta with the crunchy cilantro topping and a little lime zest.",
+  ],
+  filters: {
+    details: {
+      type: "main meal",
+      base: "pasta",
+      protein: "sausage",
+      dish: "pasta",
+      cookingMethod: ["hob"],
+    },
+    attributes: {
+      freezable: true,
+      hotWeatherFriendly: false,
+      barnRecipe: false,
+    },
+    dietaries: {
+      veganFriendly: false,
+    },
+  },
+};

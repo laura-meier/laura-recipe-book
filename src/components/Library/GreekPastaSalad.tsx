@@ -1,0 +1,77 @@
+import { Recipe } from "../RecipeFilters/Types";
+
+export const greekPastaSalad: Recipe = {
+  path: "/greek-pasta-salad",
+  originalLink: "https://www.bbc.co.uk/food/recipes/greek_pasta_salad_15496",
+  image: "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/greek_pasta_salad_15496_16x9.jpg",
+  imageAlt: "Greek pasta salad with cherry tomatoes, feta, olives, and red onion",
+  title: "Greek pasta salad",
+  time: "30 mins",
+  description:
+    "A fresh and vibrant Greek-style pasta salad featuring bow-shaped pasta tossed in a zesty oregano dressing with cherry tomatoes, olives, cucumber, red onion, and crumbled feta. Specially designed to be easy and approachable for young chefs or quick meal prep.",
+  serves: 4,
+  ingredients: [
+    [200, "g bow-shaped pasta"],
+    [3, " tbsp extra virgin olive oil"],
+    [1, " tbsp red wine vinegar"],
+    [1, " tsp dried oregano"],
+    [18, " cherry tomatoes"],
+    [75, "g olives"],
+    [0.5, " small cucumber"],
+    [1, " red onion"],
+    [100, "g feta"],
+  ],
+  method: [
+    "Fill a medium saucepan with hot water from the tap until it's three-quarters full. Set the pan on the hob, season with a pinch of salt, and bring to a boil over medium-high heat. Carefully tip the pasta into the boiling water.",
+    "Carefully stir the pasta with a long wooden spoon to prevent sticking. Cook for 10 minutes, stirring occasionally, ensuring the water remains at a gentle boil.",
+    "While the pasta cooks, measure the extra virgin olive oil, red wine vinegar, and dried oregano into a large mixing bowl. Season with salt and black pepper, and mix well to create the dressing.",
+    "Check if the pasta is cooked through. It should be soft but with a slight bite. If needed, cook for an additional 2 minutes.",
+    "Place a large colander in the sink. Turn off the heat and carefully drain the pasta. Let it cool for a few minutes, then transfer it into the mixing bowl with the dressing. Mix until well coated.",
+    "On a chopping board, carefully cut the cherry tomatoes and pitted olives in half. Add them directly to the pasta bowl.",
+    "Cut the cucumber half lengthways, then halve each piece again to make four long chunks. Slice across to create small triangles and add to the bowl.",
+    "Peel the red onion, slice it in half through the root, and thinly slice into half-moon shapes. Add the sliced onion to the bowl.",
+    "Crumble the feta cheese into small pieces over the salad, then gently toss everything together until well combined. Serve straightaway or chill for up to a day.",
+  ],
+  filters: {
+    attributes: {
+      barnRecipe: false,
+      freezable: false,
+      hotWeatherFriendly: true,
+    },
+    details: {
+      type: "main meal",
+      base: "pasta",
+      protein: "none",
+      dish: "salad",
+      cookingMethod: ["hob", "no cook"],
+    },
+    dietaries: {
+      veganFriendly: true,
+      makeItVegan: {
+        instructions: "Swapped the feta for a plant-based Greek-style vegan cheese alternative.",
+        veganIngredients: [
+          [200, "g bow-shaped pasta"],
+          [3, " tbsp extra virgin olive oil"],
+          [1, " tbsp red wine vinegar"],
+          [1, " tsp dried oregano"],
+          [18, " cherry tomatoes"],
+          [75, "g olives"],
+          [0.5, " small cucumber"],
+          [1, " red onion"],
+          [100, "g vegan feta alternative"],
+        ],
+        veganMethod: [
+          "Fill a medium saucepan with hot water from the tap until it's three-quarters full. Set the pan on the hob, season with a pinch of salt, and bring to a boil over medium-high heat. Carefully tip the pasta into the boiling water.",
+          "Carefully stir the pasta with a long wooden spoon to prevent sticking. Cook for 10 minutes, stirring occasionally, ensuring the water remains at a gentle boil.",
+          "While the pasta cooks, measure the extra virgin olive oil, red wine vinegar, and dried oregano into a large mixing bowl. Season with salt and black pepper, and mix well to create the dressing.",
+          "Check if the pasta is cooked through. It should be soft but with a slight bite. If needed, cook for an additional 2 minutes.",
+          "Place a large colander in the sink. Turn off the heat and carefully drain the pasta. Let it cool for a few minutes, then transfer it into the mixing bowl with the dressing. Mix until well coated.",
+          "On a chopping board, carefully cut the cherry tomatoes and pitted olives in half. Add them directly to the pasta bowl.",
+          "Cut the cucumber half lengthways, then halve each piece again to make four long chunks. Slice across to create small triangles and add to the bowl.",
+          "Peel the red onion, slice it in half through the root, and thinly slice into half-moon shapes. Add the sliced onion to the bowl.",
+          "Crumble the vegan feta alternative into small pieces over the bowl, then gently mix everything together until well combined. Eat straightaway, or chill for up to a day before eating.",
+        ],
+      },
+    },
+  },
+};

@@ -1,0 +1,28 @@
+.wrapper {
+  padding-top: calc(var(--mantine-spacing-xl) * 1.5);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+
+  border-radius: var(--mantine-radius-md);
+  background-image: linear-gradient(
+    var(--mantine-color-violet-5) 0%,
+    var(--mantine-color-red-5) 100%
+  );
+  background-repeat: no-repeat;
+  background-position: top left;
+  position: relative;
+}
+
+.item {
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-6)) !important;
+  border-bottom: 0;
+  border-radius: var(--mantine-radius-md);
+  box-shadow: var(--mantine-shadow-lg);
+  overflow: hidden;
+}
+
+.gradient {
+  background-image: radial-gradient(
+    var(--mantine-color-violet-6) 0%,
+    var(--mantine-color-violet-5) 100%
+  );
+}

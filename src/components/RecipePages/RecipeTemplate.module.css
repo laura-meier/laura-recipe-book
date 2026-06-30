@@ -1,0 +1,184 @@
+.inner {
+  /*   padding-left: 5%;
+  padding-right: 5%;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+ */
+}
+
+.content {
+  @media (max-width: $mantine-breakpoint-md) {
+    max-width: 100%;
+    margin-right: 0;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.imageParent {
+  height: 300px;
+  flex-shrink: 0;
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    max-width: 50%;
+  }
+}
+
+.image {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    max-width: 100%;
+    margin-right: 0;
+    object-fit: cover;
+  }
+}
+
+.headText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  font-size: 16px;
+}
+
+.title {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  font-family: Outfit, var(--mantine-font-family);
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: 35px;
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  size: 40;
+  stroke: 1.5;
+  color: light-dark(var(--mantine-color-orange-6), var(--mantine-color-orange-5));
+  gap: 1rem;
+}
+
+.show {
+  animation: fadeOut 0.5s ease 3s forwards;
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.subtitle {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  font-family: Outfit, var(--mantine-font-family);
+  font-size: 35px;
+  line-height: 1.2;
+  font-weight: 400;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: 30px;
+  }
+}
+
+.text {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  /*   font-family: Outfit, var(--mantine-font-family);
+ */
+  font-size: 16px;
+  line-height: 1.2;
+  /*   font-weight: 500;
+ */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+  gap: 3rem;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+  }
+}
+
+.ingredients {
+  width: 40%;
+}
+
+.method {
+  width: 60%;
+}
+
+/*
+Source - https://stackoverflow.com/a/28935784
+Posted by Liftoff
+Retrieved 2026-06-19, License - CC BY-SA 3.0
+*/
+
+/* 800px for tablets and phones.
+ */
+@media all and (max-width: 800px) {
+  .ingredients,
+  .method {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.control {
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex: 1;
+  }
+}
+
+.highlight {
+  position: relative;
+  background-color: var(--mantine-color-orange-light);
+  border-radius: var(--mantine-radius-sm);
+  padding: 4px 12px;
+}
+
+/* Pointer cursor on checkbox hover */
+.ingredientItem {
+  list-style-type: none;
+}
+
+/* Style the ingredient text only when its checkbox is checked */
+.ingredientItem:has(input:checked) .ingredientLabel {
+  text-decoration: line-through;
+  color: var(--mantine-color-dimmed);
+}

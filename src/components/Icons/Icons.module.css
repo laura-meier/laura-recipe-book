@@ -1,0 +1,41 @@
+.icons {
+  background-color: white;
+  color: orange;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.icons2 {
+  width: 40px;
+  height: 40px;
+}
+
+.icons2Group {
+  flex-wrap: wrap;
+}
+
+.servesGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.numberInput {
+  width: 60px;
+  outline: orange;
+}
+
+.timeGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.text {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  opacity: 0.7;
+}

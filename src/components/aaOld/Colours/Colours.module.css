@@ -1,0 +1,60 @@
+.mantineRed {
+  background-color: var(--mantine-color-red-6);
+}
+
+.mantineOrange {
+  background-color: var(--mantine-color-orange-6);
+}
+
+.mantineYellow {
+  background-color: var(--mantine-color-yellow-6);
+}
+
+.mantineLime {
+  background-color: var(--mantine-color-lime-6);
+}
+
+.mantineGreen {
+  background-color: var(--mantine-color-green-6);
+}
+
+.mantineTeal {
+  background-color: var(--mantine-color-teal-6);
+}
+
+.mantineCyan {
+  background-color: var(--mantine-color-cyan-6);
+}
+
+.mantineBlue {
+  background-color: var(--mantine-color-blue-6);
+}
+
+.mantineIndigo {
+  background-color: var(--mantine-color-indigo-6);
+}
+
+.mantineViolet {
+  background-color: var(--mantine-color-violet-6);
+}
+
+.mantineGrape {
+  background-color: var(--mantine-color-grape-6);
+}
+
+.mantinePink {
+  background-color: var(--mantine-color-pink-6);
+}
+
+.mantineGray {
+  background-color: var(--mantine-color-gray-6);
+}
+
+.mantineDark {
+  background-color: var(--mantine-color-dark-6);
+}
+
+.box {
+  height: 140px;
+  border-radius: var(--mantine-radius-md);
+}
