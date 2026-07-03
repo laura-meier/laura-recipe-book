@@ -1,13 +1,9 @@
 import { Button, Paper, Text, Title } from "@mantine/core";
 import classes from "./CardWithBackground.module.css";
+import { Recipe } from "../RecipeFilters/Types";
 
-interface CardProps {
-  image: string;
-  title: string;
-  category: string;
-}
-
-export function CardWithBackground({ image, title, category }: CardProps) {
+export function CardWithBackground(recipe: Recipe) {
+  const { image, title, time, path } = recipe;
   return (
     <Paper
       shadow="md"
@@ -18,14 +14,14 @@ export function CardWithBackground({ image, title, category }: CardProps) {
     >
       <div>
         <Text className={classes.category} size="xs">
-          {category}
+          {time.toLowerCase()}
         </Text>
         <Title order={3} className={classes.title}>
           {title}
         </Title>
       </div>
       <Button variant="white" color="dark">
-        Read article
+        Cook this
       </Button>
     </Paper>
   );

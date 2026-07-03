@@ -1,19 +1,6 @@
-.icons {
-  background-color: white;
-  color: orange;
-  display: flex;
-  align-items: center;
-  border-radius: 50%;
-  padding: 5px;
-}
-
 .icons2 {
-  width: 40px;
-  height: 40px;
-}
-
-.icons2Group {
-  flex-wrap: wrap;
+  width: 30px;
+  height: 30px;
 }
 
 .servesGroup {
@@ -38,4 +25,13 @@
 .text {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   opacity: 0.7;
+}
+
+.icons {
+  background-color: white;
+  color: orange;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  padding: 5px;
 }

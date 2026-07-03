@@ -31,7 +31,11 @@ const links: { label: string; link?: string; links?: { link: string; label: stri
   { label: "Main Meals", link: "/main-meal-recipes" },
   { label: "Baking", link: "/baking-recipes" },
   { label: "Other", link: "/other-recipes" },
-  { label: "Recipe Library", link: "/recipe-library", links: [...recipeLinks] },
+  {
+    label: "Recipe Library",
+    link: "/recipe-library",
+    links: [{ link: "/recipe-library", label: "All Recipes" }, ...recipeLinks],
+  },
   // { label: "About", link: "/about" },
   // {
   //   label: "Components",

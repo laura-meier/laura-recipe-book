@@ -28,6 +28,7 @@
     "@tabler/icons-react": "^3.41.1",
     "@types/react-router-dom": "^5.3.3",
     "embla-carousel": ">=8.0.0",
+    "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": ">=8.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

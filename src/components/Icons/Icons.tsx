@@ -34,8 +34,8 @@ function MakeItVeganToggle({ recipe, isVeganToggle, setIsVeganToggle }: MakeItVe
 
   const veganTooltip =
     isVeganToggle && recipe.filters.dietaries.veganFriendly
-      ? "remove vegan modifications"
-      : "make it vegan";
+      ? "Remove vegan modifications"
+      : "Make it vegan";
   return (
     <Popover
       width={200}
@@ -72,7 +72,13 @@ function MakeItVeganToggle({ recipe, isVeganToggle, setIsVeganToggle }: MakeItVe
 
 function SnowflakeIcon2(freezable: boolean) {
   if (freezable) {
-    return <IconSnowflake className={classes.icons2} />;
+    return (
+      <div>
+        <Tooltip label="Freezable">
+          <IconSnowflake className={classes.icons2} />
+        </Tooltip>
+      </div>
+    );
   }
 }
 
@@ -84,7 +90,7 @@ type ServesProps = {
 
 function ServesIcon2({ serves, servesValue, setServesValue }: ServesProps) {
   return (
-    <Tooltip label={`makes ${servesValue} portions`}>
+    <Tooltip label={`Makes ${servesValue} portions`}>
       <div className={classes.servesGroup}>
         <IconToolsKitchen2 className={classes.icons2} />
         <NumberInput
@@ -107,10 +113,12 @@ function ServesIcon2({ serves, servesValue, setServesValue }: ServesProps) {
 
 function TimeIcon2(time: string) {
   return (
-    <div className={classes.timeGroup}>
-      <IconClock className={classes.icons2} />
-      <Text className={classes.text}>{time.toLowerCase()}</Text>
-    </div>
+    <Tooltip label={`Takes ${time.toLowerCase()} to cook`}>
+      <div className={classes.timeGroup}>
+        <IconClock className={classes.icons2} />
+        <Text className={classes.text}>{time.toLowerCase()}</Text>
+      </div>
+    </Tooltip>
   );
 }
 
@@ -170,7 +178,7 @@ function SnowflakeIcon(freezable: boolean) {
   if (freezable) {
     return (
       <div>
-        <Tooltip label="freezable">
+        <Tooltip label="Freezable">
           <IconSnowflake size={40} stroke={1.5} className={classes.icons} />
         </Tooltip>
       </div>
@@ -182,7 +190,7 @@ function HotWeatherFriendlyIcon(hotWeatherFriendly: boolean) {
   if (hotWeatherFriendly) {
     return (
       <div>
-        <Tooltip label="hot weather friendly">
+        <Tooltip label="Hot weather friendly">
           <IconSunHigh size={40} stroke={1.5} className={classes.icons} />
         </Tooltip>
       </div>

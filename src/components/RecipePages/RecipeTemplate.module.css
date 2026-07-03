@@ -74,6 +74,7 @@
 
 .icons {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   size: 40;
   stroke: 1.5;

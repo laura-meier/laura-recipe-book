@@ -44,7 +44,7 @@
 
 .highlight {
   position: relative;
-  background-color: var(--mantine-color-violet-light);
+  background-color: var(--mantine-color-orange-light);
   border-radius: var(--mantine-radius-sm);
   padding: 4px 12px;
 }

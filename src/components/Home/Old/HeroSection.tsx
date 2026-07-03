@@ -1,16 +1,19 @@
 import { Button, Container, Flex, Image, List, Text, ThemeIcon, Title } from "@mantine/core";
 import { IconHeartFilled } from "@tabler/icons-react";
-import illustration from "../../assets/illustration.svg";
+import illustration from "../../../assets/illustration.svg";
 import classes from "./HeroSection.module.css";
+import { Carousel } from "@/components/Carousel/Carousel";
 
 export function HeroSection() {
   return (
-    <Container size="md">
+    <Container size="lg">
+      <Carousel />
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
-            Empowering <span className={classes.highlight}>women</span> in tech <br />
+            <span className={classes.highlight}>Main meals</span>
           </Title>
+          <Carousel />
           <Text c="dimmed" mt="md">
             A 5-day in-person coding course for female and non-binary first-year university
             students. No prior coding experience needed — just curiosity and ambition.

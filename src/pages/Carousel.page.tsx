@@ -1,7 +1,7 @@
 import { Container } from "@mantine/core";
 import { PageTitle } from "@/components/aaOld/PageTitle/PageTitle";
 import classes from "./Pages.module.css";
-import { Carousel } from "@/components/aaOld/Carousel/Carousel";
+import { Carousel } from "@/components/Carousel/Carousel";
 
 export function CarouselPage() {
   return (
