@@ -46,7 +46,21 @@ export const greekPastaSalad: Recipe = {
       cookingMethod: ["hob", "no cook"],
     },
     dietaries: {
-      veganFriendly: true,
+      dietaryNotes: "",
+      dairyFree: true,
+      eggFree: true,
+      halal: true,
+      fishFree: true,
+      glutenFree: true,
+      kosher: true,
+      lactoseFree: true,
+      nutFree: true,
+      shellfishFree: true,
+      soyFree: true,
+      pescatarian: true,
+      vegetarian: true,
+      vegan: false,
+      veganAdjustable: true,
       makeItVegan: {
         instructions: "Swapped the feta for a plant-based Greek-style vegan cheese alternative.",
         veganIngredients: [

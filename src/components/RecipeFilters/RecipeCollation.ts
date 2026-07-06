@@ -1,3 +1,4 @@
+import { bakedTortillaCrisps } from "../Library/BakedTortillaCrisps";
 import { cassoulet } from "../Library/Cassoulet";
 import { chickenCaesarSaladWrap } from "../Library/ChickenCaesarSaladWrap";
 import { chickenPastaBake } from "../Library/ChickenPastaBake";
@@ -20,4 +21,5 @@ export const data = [
   chickenPastaBake,
   frenchSaladDressing,
   greekPastaSalad,
+  bakedTortillaCrisps,
 ];

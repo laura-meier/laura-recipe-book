@@ -7,7 +7,7 @@ export function RecipeCard(recipe: Recipe) {
   const { image, title, time, path } = recipe;
 
   return (
-    <a href={path}>
+    <a href={path} className={classes.link}>
       <Paper>
         <Paper
           shadow="md"

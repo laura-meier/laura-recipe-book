@@ -17,7 +17,28 @@ interface MakeItVegan {
   veganMethod: string[];
 }
 
-type Dietaries = { veganFriendly: true; makeItVegan: MakeItVegan } | { veganFriendly: false };
+type BaseDietaries = {
+  dietaryNotes: string;
+  dairyFree: boolean;
+  eggFree: boolean;
+  halal: boolean;
+  fishFree: boolean;
+  glutenFree: boolean;
+  kosher: boolean;
+  lactoseFree: boolean;
+  nutFree: boolean;
+  shellfishFree: boolean;
+  soyFree: boolean;
+  pescatarian: boolean;
+  vegetarian: boolean;
+};
+
+type Dietaries = BaseDietaries &
+  (
+    | { vegan: true }
+    | { vegan: false; veganAdjustable: true; makeItVegan: MakeItVegan }
+    | { vegan: false; veganAdjustable: false }
+  );
 
 interface Filters {
   details: Details;

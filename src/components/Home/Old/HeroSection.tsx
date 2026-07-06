@@ -5,9 +5,48 @@ import classes from "./HeroSection.module.css";
 import { Carousel } from "@/components/Carousel/Carousel";
 
 export function HeroSection() {
+  const CarouselSection = ({
+    title,
+    path,
+    recipeType,
+  }: {
+    title: string;
+    path: string;
+    recipeType?: string;
+  }) => {
+    return (
+      <>
+        <a href={path} className={classes.link}>
+          <Title className={classes.title}>
+            <span className={classes.highlight}>{title}</span>
+          </Title>
+        </a>
+        <Carousel recipeType={recipeType} />
+      </>
+    );
+  };
+
   return (
-    <Container size="lg">
-      <Carousel />
+    <>
+      <Container size="lg" w="100%">
+        <div className={classes.carousel}>
+          <Title className={classes.title}>
+            <a href="/recipe-library" className={classes.link}>
+              <span className={classes.highlight}>View all recipes</span>
+            </a>
+          </Title>
+          {/* <CarouselSection title={"View all recipes"} path={"/recipe-library"} /> */}
+          <CarouselSection
+            title={"Main meals"}
+            path={"/main-meal-recipes"}
+            recipeType={"main meal"}
+          />
+          <CarouselSection title={"Baking"} path={"/baking-recipes"} recipeType={"baking"} />
+          <CarouselSection title={"Other"} path={"/other-recipes"} recipeType={"other"} />
+        </div>
+      </Container>
+
+      {/* <Container size="lg">
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
@@ -70,7 +109,7 @@ export function HeroSection() {
           </Flex>
         </div>
         <Image src={illustration} className={classes.image} alt="" />
-      </div>
-    </Container>
+      </div> */}
+    </>
   );
 }

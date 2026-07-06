@@ -9,7 +9,32 @@
       "WebFetch(domain:www.bbcgoodfood.com)",
       "Bash(curl -sL -A 'Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0 Safari/537.36' -o /tmp/w.html -w 'HTTP:%{http_code} size:%{size_download}\\\\n' https://www.waitrose.com/ecom/recipe/summer-veg-bacon-cassoulet?srsltid=AfmBOorEAYEGF5ACVVMPyB0U7wzypcdICXb_pp0mLghy4yfruC2lP8Ug)",
       "Read(//tmp/**)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(pkill -f \"remote-debugging-port=9222\")",
+      "Bash(rm -f /tmp/cdp-inspect.js)",
+      "Bash(curl -sf http://localhost:5173 -o /dev/null -w \"5173: %{http_code}\\\\n\")",
+      "Bash(curl -sf http://localhost:5174 -o /dev/null -w \"5174: %{http_code}\\\\n\")",
+      "Bash(curl -s \"http://localhost:5173/\")",
+      "Bash(node -e \"require\\('puppeteer-core'\\); console.log\\('yes'\\)\")",
+      "Bash(node -e \"require\\('puppeteer'\\); console.log\\('yes'\\)\")",
+      "Read(//private/tmp/**)",
+      "Bash(node cdp-inspect.js)",
+      "Bash(cp /tmp/cdp-inspect.js /Users/laura.meier/CodeF/laura-recipe-book/cdp-inspect.tmp.js)",
+      "Bash(node cdp-inspect.tmp.js)",
+      "Bash(rm /Users/laura.meier/CodeF/laura-recipe-book/cdp-inspect.tmp.js)",
+      "Bash(cp /tmp/cdp-inspect.js /Users/laura.meier/CodeF/laura-recipe-book/cdp-inspect.tmp.cjs)",
+      "Bash(node cdp-inspect.tmp.cjs)",
+      "Bash(sed -i '' 's/function getJSON\\(url\\) {/function getJSON\\(url, method\\) {\\\\n  method = method || \"GET\";/' /Users/laura.meier/CodeF/laura-recipe-book/cdp-inspect.tmp.cjs)",
+      "Bash(sed -i '' 's/http.get\\(url, \\(res\\) => {/http.request\\(url, { method: method }, \\(res\\) => {/' /Users/laura.meier/CodeF/laura-recipe-book/cdp-inspect.tmp.cjs)",
+      "Bash(sed -i '' 's/}\\).on\\(\"error\", reject\\);/}\\).on\\(\"error\", reject\\).end\\(\\);/' /Users/laura.meier/CodeF/laura-recipe-book/cdp-inspect.tmp.cjs)",
+      "Bash(sed -i '' 's/getJSON\\(\"http:\\\\/\\\\/localhost:9222\\\\/json\\\\/new?http:\\\\/\\\\/localhost:5173\\\\/\"\\)/getJSON\\(\"http:\\\\/\\\\/localhost:9222\\\\/json\\\\/new?http:\\\\/\\\\/localhost:5173\\\\/\", \"PUT\"\\)/' /Users/laura.meier/CodeF/laura-recipe-book/cdp-inspect.tmp.cjs)",
+      "Bash(node /Users/laura.meier/CodeF/laura-recipe-book/cdp-inspect.tmp.cjs)",
+      "Bash(python3 -c ' *)",
+      "Bash(git -C /Users/laura.meier/CodeF/laura-recipe-book diff HEAD -- src/components/Carousel/Carousel.tsx)",
+      "Bash(lsof -iTCP -sTCP:LISTEN -P)",
+      "Bash(xargs -I{} sh -c 'echo ==={}===; cat {}')"
     ]
   }
 }

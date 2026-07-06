@@ -7,7 +7,6 @@ import { Recipe } from "../RecipeFilters/Types";
 export function RecipeTemplate(recipe: Recipe) {
   const { image, title, description, serves, ingredients, method, time, filters } = recipe;
   const { dietaries } = filters;
-  const { veganFriendly } = dietaries;
 
   const [isVeganToggle, setIsVeganToggle] = useState(false);
   const [servesValue, setServesValue] = useState(serves);
@@ -15,7 +14,9 @@ export function RecipeTemplate(recipe: Recipe) {
   const servesMultiplier = servesValue / serves;
 
   const ingredientsArray =
-    isVeganToggle && veganFriendly ? dietaries.makeItVegan.veganIngredients : ingredients;
+    isVeganToggle && "veganAdjustable" in dietaries && "makeItVegan" in dietaries
+      ? dietaries.makeItVegan.veganIngredients
+      : ingredients;
 
   const ingredientsList = ingredientsArray.map((item) => (
     <ListItem
@@ -26,12 +27,15 @@ export function RecipeTemplate(recipe: Recipe) {
         color="orange.4"
         iconColor="dark.8"
         size="md"
-        label={[item[0] * servesMultiplier, item[1]]}
+        label={item[0] === 0 ? item[1] : [item[0] * servesMultiplier, item[1]]}
       />
     </ListItem>
   ));
 
-  const methodArray = isVeganToggle && veganFriendly ? dietaries.makeItVegan.veganMethod : method;
+  const methodArray =
+    isVeganToggle && "veganAdjustable" in dietaries && "makeItVegan" in dietaries
+      ? dietaries.makeItVegan.veganMethod
+      : method;
 
   const methodList = methodArray.map((item) => <ListItem>{item}</ListItem>);
 
@@ -45,7 +49,9 @@ export function RecipeTemplate(recipe: Recipe) {
             </div>
             <div className={classes.headText}>
               <Title className={classes.title}>
-                {isVeganToggle && veganFriendly ? `Vegan ${title.toLowerCase()}` : title}
+                {isVeganToggle && "veganAdjustable" in dietaries
+                  ? `Vegan ${title.toLowerCase()}`
+                  : title}
               </Title>
               <div className={classes.icons}>
                 <Icons2

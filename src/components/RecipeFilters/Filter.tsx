@@ -26,7 +26,7 @@ export function Filter({ recipeType }: { recipeType?: string }) {
     hotWeatherFriendly: (item) => item.filters.attributes.hotWeatherFriendly,
     barnRecipe: (item) => item.filters.attributes.barnRecipe,
     // dietaries
-    veganFriendly: (item) => item.filters.dietaries.veganFriendly,
+    veganAdjustable: (item) => item.filters.dietaries.veganAdjustable,
     // details — type
     "type:main meal": (item) => item.filters.details.type === "main meal",
     "type:baking": (item) => item.filters.details.type === "baking",

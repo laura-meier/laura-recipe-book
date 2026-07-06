@@ -1,3 +1,16 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+
+  width: 100%;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    min-width: 280px;
+  }
+}
+
 .inner {
   display: flex;
   justify-content: space-between;
@@ -15,10 +28,21 @@
   }
 }
 
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
 .title {
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  color: light-dark(var(--mantine-color-white), var(--mantine-color-white));
   font-family: Outfit, var(--mantine-font-family);
-  font-size: 44px;
+  font-size: 35px;
   line-height: 1.2;
   font-weight: 500;
 
@@ -44,7 +68,7 @@
 
 .highlight {
   position: relative;
-  background-color: var(--mantine-color-orange-light);
+  background-color: orange;
   border-radius: var(--mantine-radius-sm);
   padding: 4px 12px;
 }

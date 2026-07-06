@@ -48,7 +48,21 @@ export const cassoulet: Recipe = {
       barnRecipe: false,
     },
     dietaries: {
-      veganFriendly: true,
+      dietaryNotes: "",
+      dairyFree: true,
+      eggFree: true,
+      halal: true,
+      fishFree: true,
+      glutenFree: true,
+      kosher: true,
+      lactoseFree: true,
+      nutFree: true,
+      shellfishFree: true,
+      soyFree: true,
+      pescatarian: false,
+      vegetarian: false,
+      vegan: false,
+      veganAdjustable: true,
       makeItVegan: {
         instructions: "Removed the bacon",
         veganIngredients: [

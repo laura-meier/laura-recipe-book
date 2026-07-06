@@ -1,14 +1,14 @@
-a {
+.link {
   text-decoration: none;
 }
 
-a:hover {
+.link:hover {
   text-decoration: underline;
   text-decoration-color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
 }
 
 .card {
-  height: 440px;
+  height: 350px;
   background-size: cover;
   background-position: center;
   position: relative;
