@@ -1,6 +1,6 @@
 import type { TreeNodeData } from "@mantine/core";
 import { IconLeaf, IconSnowflake, IconSunHigh } from "@tabler/icons-react";
-import { Recipe } from "./Types";
+import { booleanDietaryKeys, dietaryLabels, Recipe } from "./Types";
 
 export function filterOptions(recipes: Recipe[], recipeType?: string): TreeNodeData[] {
   const unique = <T,>(arr: T[]) => [...new Set(arr)];
@@ -44,20 +44,9 @@ export function filterOptions(recipes: Recipe[], recipeType?: string): TreeNodeD
       value: "dietaries",
       label: "Dietaries",
       children: [
-        { value: "dairyFree", label: "Dairy-free" },
-        { value: "eggFree", label: "Egg-free" },
-        { value: "halal", label: "Halal" },
-        { value: "fishFree", label: "Fish-free" },
-        { value: "glutenFree", label: "Gluten-free" },
-        { value: "kosher", label: "Kosher" },
-        { value: "lactoseFree", label: "Lactose-free" },
-        { value: "nutFree", label: "Nut-free" },
-        { value: "shellfishFree", label: "Shellfish-free" },
-        { value: "soyFree", label: "Soy-free" },
-        { value: "pescatarian", label: "Pescatarian" },
-        { value: "vegetarian", label: "Vegetarian" },
+        ...booleanDietaryKeys.map((key) => ({ value: key, label: dietaryLabels[key] })),
         { value: "vegan", label: "Vegan" },
-        { value: "vegenAdjustable", label: "Can be made vegan", nodeProps: { icon: <IconLeaf /> } },
+        { value: "veganAdjustable", label: "Can be made vegan", nodeProps: { icon: <IconLeaf /> } },
       ],
     },
   ];

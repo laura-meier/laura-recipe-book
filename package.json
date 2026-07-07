@@ -20,6 +20,7 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
+    "@fontsource/outfit": "^5.2.8",
     "@mantine/carousel": "^9.1.1",
     "@mantine/core": "9.2.1",
     "@mantine/hooks": "9.2.1",

@@ -11,6 +11,7 @@ import { useState } from "react";
 import { data } from "./RecipeCollation";
 import { RecipeCard } from "../cards/RecipeCard";
 import { filterOptions } from "./Tree";
+import { booleanDietaryKeys } from "./Types";
 import classes from "./Filter.module.css";
 
 export function Filter({ recipeType }: { recipeType?: string }) {
@@ -25,8 +26,19 @@ export function Filter({ recipeType }: { recipeType?: string }) {
     freezable: (item) => item.filters.attributes.freezable,
     hotWeatherFriendly: (item) => item.filters.attributes.hotWeatherFriendly,
     barnRecipe: (item) => item.filters.attributes.barnRecipe,
-    // dietaries
-    veganAdjustable: (item) => item.filters.dietaries.veganAdjustable,
+    // dietaries — boolean flags (dairyFree, glutenFree, etc.), generated from the same
+    // booleanDietaryKeys list that Tree.tsx uses to build the tree, so the two can't drift.
+    ...Object.fromEntries(
+      booleanDietaryKeys.map((key) => [
+        key,
+        (item: (typeof data)[number]) => item.filters.dietaries[key],
+      ]),
+    ),
+    vegan: (item) => item.filters.dietaries.vegan,
+    // narrow on the `vegan` discriminant, not `"veganAdjustable" in dietaries` — the
+    // { vegan: false; veganAdjustable: false } branch also has the key present (just false)
+    veganAdjustable: (item) =>
+      !item.filters.dietaries.vegan && item.filters.dietaries.veganAdjustable,
     // details — type
     "type:main meal": (item) => item.filters.details.type === "main meal",
     "type:baking": (item) => item.filters.details.type === "baking",

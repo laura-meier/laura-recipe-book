@@ -30,7 +30,6 @@
 }
 
 .title {
-  font-family: Outfit, sans-serif;
   font-weight: 600;
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   line-height: 1.2;

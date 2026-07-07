@@ -33,7 +33,7 @@ function MakeItVeganToggle({ recipe, isVeganToggle, setIsVeganToggle }: MakeItVe
   }, [isVeganToggle]);
 
   const veganTooltip =
-    isVeganToggle && recipe.filters.dietaries.veganAdjustable
+    isVeganToggle && "veganAdjustable" in recipe.filters.dietaries
       ? "Remove vegan modifications"
       : "Make it vegan";
   return (
@@ -59,7 +59,9 @@ function MakeItVeganToggle({ recipe, isVeganToggle, setIsVeganToggle }: MakeItVe
           />
         </Tooltip>
       </Popover.Target>
-      {recipe.filters.dietaries.veganAdjustable && isVeganToggle ? (
+      {"veganAdjustable" in recipe.filters.dietaries &&
+      "makeItVegan" in recipe.filters.dietaries &&
+      isVeganToggle ? (
         <Popover.Dropdown>
           <Text size="sm">{recipe.filters.dietaries.makeItVegan.instructions}</Text>
         </Popover.Dropdown>
@@ -74,7 +76,7 @@ function SnowflakeIcon2(freezable: boolean) {
   if (freezable) {
     return (
       <div>
-        <Tooltip label="Freezable">
+        <Tooltip label="Freezable" events={{ hover: true, focus: true, touch: true }}>
           <IconSnowflake className={classes.icons2} />
         </Tooltip>
       </div>
@@ -123,7 +125,7 @@ function TimeIcon2(time: string) {
 }
 
 function VeganFriendlyIcon2({ recipe, isVeganToggle, setIsVeganToggle }: MakeItVeganToggleProps) {
-  if (recipe.filters.dietaries.veganAdjustable) {
+  if ("veganAdjustable" in recipe.filters.dietaries) {
     return (
       <MakeItVeganToggle
         recipe={recipe}
@@ -215,7 +217,7 @@ export function Icons({ recipe }: { recipe: Recipe }) {
     <>
       {SnowflakeIcon(recipe.filters.attributes.freezable)}
       {HotWeatherFriendlyIcon(recipe.filters.attributes.hotWeatherFriendly)}
-      {VeganFriendlyIcon(recipe.filters.dietaries.veganAdjustable)}
+      {VeganFriendlyIcon("veganAdjustable" in recipe.filters.dietaries)}
     </>
   );
 }
