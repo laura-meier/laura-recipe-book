@@ -7,3 +7,7 @@
 :global([role="option"][aria-level="4"]) {
   padding-inline-start: 7rem !important;
 }
+
+.noResultsText {
+  padding-top: 10px;
+}

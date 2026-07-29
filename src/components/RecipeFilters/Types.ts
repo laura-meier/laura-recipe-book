@@ -17,7 +17,7 @@ interface MakeItVegan {
   veganMethod: string[];
 }
 
-export type BaseDietaries = {
+interface BaseDietaries {
   dietaryNotes: string;
   dairyFree: boolean;
   eggFree: boolean;
@@ -31,7 +31,7 @@ export type BaseDietaries = {
   soyFree: boolean;
   pescatarian: boolean;
   vegetarian: boolean;
-};
+}
 
 // Single source of truth for the boolean dietary fields: key -> display label.
 // Record (not array) so TS errors here if a boolean field is added to/removed from

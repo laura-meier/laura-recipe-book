@@ -1,12 +1,5 @@
 .inner {
-  /*   padding-left: 5%;
-  padding-right: 5%;
-
-  @media (max-width: $mantine-breakpoint-md) {
-    padding-left: 0;
-    padding-right: 0;
-  }
- */
+  padding: 16px 0;
 }
 
 .content {
@@ -33,9 +26,15 @@
 .imageParent {
   height: 300px;
   flex-shrink: 0;
+  display: flex;
 
   @media (min-width: $mantine-breakpoint-xs) {
     max-width: 50%;
+    justify-content: center;
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    justify-content: center;
   }
 }
 

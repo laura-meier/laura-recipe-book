@@ -15,14 +15,11 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import cookingPot from "../../assets/cooking-pot.svg";
 import classes from "./HeaderMenu.module.css";
-import { data } from "../RecipeFilters/RecipeCollation";
+import { data } from "../RecipeLibrary/RecipeList";
 
 const recipeLinks = data.map((item) => ({
   link: item.path,
-  label: item.path
-    .slice(1)
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase()),
+  label: item.title.replace(/\b\w/g, (c) => c.toUpperCase()),
 }));
 
 const links: { label: string; link?: string; links?: { link: string; label: string }[] }[] = [

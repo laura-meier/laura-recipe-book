@@ -92,7 +92,10 @@ type ServesProps = {
 
 function ServesIcon2({ serves, servesValue, setServesValue }: ServesProps) {
   return (
-    <Tooltip label={`Makes ${servesValue} portions`}>
+    <Tooltip
+      label={`Makes ${servesValue} portions`}
+      events={{ hover: true, focus: true, touch: true }}
+    >
       <div className={classes.servesGroup}>
         <IconToolsKitchen2 className={classes.icons2} />
         <NumberInput
@@ -115,7 +118,10 @@ function ServesIcon2({ serves, servesValue, setServesValue }: ServesProps) {
 
 function TimeIcon2(time: string) {
   return (
-    <Tooltip label={`Takes ${time.toLowerCase()} to cook`}>
+    <Tooltip
+      label={`Takes ${time.toLowerCase()} to cook`}
+      events={{ hover: true, focus: true, touch: true }}
+    >
       <div className={classes.timeGroup}>
         <IconClock className={classes.icons2} />
         <Text className={classes.text}>{time.toLowerCase()}</Text>

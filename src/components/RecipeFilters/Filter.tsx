@@ -1,4 +1,5 @@
 import {
+  CheckIcon,
   Container,
   Group,
   SimpleGrid,
@@ -8,7 +9,7 @@ import {
   TreeSelectProps,
 } from "@mantine/core";
 import { useState } from "react";
-import { data } from "./RecipeCollation";
+import { data } from "../RecipeLibrary/RecipeList";
 import { RecipeCard } from "../cards/RecipeCard";
 import { filterOptions } from "./Tree";
 import { booleanDietaryKeys } from "./Types";
@@ -88,8 +89,9 @@ export function Filter({ recipeType }: { recipeType?: string }) {
 
   const dataArgs = filterOptions(scopedData, recipeType);
 
-  const renderTreeNode: TreeSelectProps["renderNode"] = ({ node }) => (
+  const renderTreeNode: TreeSelectProps["renderNode"] = ({ node, selected }) => (
     <Group gap="xs">
+      {selected && <CheckIcon style={{ width: 12, height: 12 }} />}
       {node.nodeProps?.icon}
       <Text size="sm">{node.label}</Text>
     </Group>
@@ -112,11 +114,17 @@ export function Filter({ recipeType }: { recipeType?: string }) {
         nothingFoundMessage="Nothing found..."
         withLines={false}
       />
-      <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="xl" mt={50}>
-        {filtered.map((item) => (
-          <RecipeCard key={item.title} {...item} />
-        ))}
-      </SimpleGrid>
+      {filtered.length !== 0 ? (
+        <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="xl" mt={50}>
+          {filtered.map((item) => (
+            <RecipeCard key={item.title} {...item} />
+          ))}
+        </SimpleGrid>
+      ) : (
+        <Text className={classes.noResultsText}>
+          No results - remove one or more filters to see recipes.
+        </Text>
+      )}
     </Container>
   );
 }

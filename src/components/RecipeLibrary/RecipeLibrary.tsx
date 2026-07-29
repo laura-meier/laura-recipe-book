@@ -1,4 +1,4 @@
-import { Badge, Container, Group, Text, Title } from "@mantine/core";
+import { Container, Text, Title } from "@mantine/core";
 import classes from "./RecipeLibrary.module.css";
 import { useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";

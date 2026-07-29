@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "./pages";
 import { RecipeTemplatePage } from "./pages/RecipeTemplate.page";
-import { data } from "./components/RecipeFilters/RecipeCollation";
+import { data } from "./components/RecipeLibrary/RecipeList";
 import { RecipeLibraryPage } from "./pages/RecipeLibrary.page";
 import { BakingRecipesPage } from "./pages/BakingRecipes";
 import { MainMealRecipesPage } from "./pages/MainMealRecipes";

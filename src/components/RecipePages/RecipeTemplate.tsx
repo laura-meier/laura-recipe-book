@@ -27,7 +27,11 @@ export function RecipeTemplate(recipe: Recipe) {
         color="orange.4"
         iconColor="dark.8"
         size="md"
-        label={item[0] === 0 ? item[1] : [item[0] * servesMultiplier, item[1]]}
+        label={
+          item[0] === 0
+            ? item[1]
+            : [parseFloat((item[0] * servesMultiplier).toPrecision(2)), item[1]]
+        }
       />
     </ListItem>
   ));

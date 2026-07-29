@@ -2,7 +2,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { CardWithBackground } from "@/components/cards/CardWithBackground";
 import { Carousel as MantineCarousel } from "@mantine/carousel";
 import classes from "./Carousel.module.css";
-import { data } from "../RecipeFilters/RecipeCollation";
+import { data } from "../RecipeLibrary/RecipeList";
 import { useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { useRef } from "react";
