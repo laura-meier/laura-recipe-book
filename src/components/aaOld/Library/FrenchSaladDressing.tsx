@@ -1,8 +1,8 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 
 export const frenchSaladDressing: Recipe = {
   path: "/french-dressing",
-  originalLink: "https://www.bbcgoodfood.com/howto/guide/10-salad-dressings-you-can-make-minutes",
+  inspiredBy: "https://www.bbcgoodfood.com/howto/guide/10-salad-dressings-you-can-make-minutes",
   image:
     "https://images.immediate.co.uk/production/volatile/sites/30/2016/08/French-dressing-a881090.jpg?quality=90&webp=true&fit=975,649",
   imageAlt:
@@ -29,7 +29,7 @@ export const frenchSaladDressing: Recipe = {
     attributes: {
       freezable: false,
       hotWeatherFriendly: true,
-      barnRecipe: false,
+      author: "",
     },
     dietaries: {
       dietaryNotes: "",

@@ -1,8 +1,8 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 
 export const cassoulet: Recipe = {
   path: "/cassoulet",
-  originalLink:
+  inspiredBy:
     "https://www.waitrose.com/ecom/recipe/summer-veg-bacon-cassoulet?srsltid=AfmBOorEAYEGF5ACVVMPyB0U7wzypcdICXb_pp0mLghy4yfruC2lP8Ug",
   image:
     "https://waitrose-prod.scene7.com/is/image/waitroseprod/summer-veg-and-bacon-cassoulet?uuid=cdb282f7-d972-4d21-94e7-9720a19c98d6&$Waitrose-Image-Preset-90$&wid=2400&fit=constrain%2C0",
@@ -45,7 +45,7 @@ export const cassoulet: Recipe = {
     attributes: {
       freezable: true,
       hotWeatherFriendly: false,
-      barnRecipe: false,
+      author: "",
     },
     dietaries: {
       dietaryNotes: "",

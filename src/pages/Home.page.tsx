@@ -1,15 +1,14 @@
 import { Center, Stack } from "@mantine/core";
 import classes from "./Pages.module.css";
-import { MainMealRecipesContent } from "@/components/MainMeals/MainMealRecipes";
-import { HomeTitle } from "@/components/Home/Old/HomeTitle";
-import { HeroSection } from "@/components/Home/Old/HeroSection";
+import { HomeTitle } from "@/components/Home/HomeTitle";
+import { ExploreSection } from "@/components/Home/ExploreSection";
 
 export function HomePage() {
   return (
     <Center className={classes.pageContent}>
       <Stack className={classes.stack}>
         <HomeTitle />
-        <HeroSection />
+        <ExploreSection />
       </Stack>
     </Center>
   );

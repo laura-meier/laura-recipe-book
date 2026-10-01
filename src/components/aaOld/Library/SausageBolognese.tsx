@@ -1,8 +1,8 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 
 export const sausageBolognese: Recipe = {
   path: "/sausage-bolognese",
-  originalLink: "https://www.bbc.co.uk/food/recipes/spicy_sausage_pasta_42455",
+  inspiredBy: "https://www.bbc.co.uk/food/recipes/spicy_sausage_pasta_42455",
   image:
     "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/spicy_sausage_pasta_42455_16x9.jpg",
   imageAlt: "",
@@ -40,7 +40,7 @@ export const sausageBolognese: Recipe = {
     attributes: {
       freezable: true,
       hotWeatherFriendly: false,
-      barnRecipe: false,
+      author: "",
     },
     dietaries: {
       dietaryNotes: "",

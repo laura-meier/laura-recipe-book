@@ -85,18 +85,20 @@ export function RecipeTemplate(recipe: Recipe) {
             </div>
           </div>
           <div className={classes.button}>
-            <Button
-              component="a"
-              target="_blank"
-              href={recipe.originalLink}
-              rel="noopener noreferrer"
-              color="orange"
-              variant="default"
-              size="md"
-              className={classes.control}
-            >
-              Original recipe
-            </Button>
+            {recipe.inspiredBy && (
+              <Button
+                component="a"
+                target="_blank"
+                href={recipe.inspiredBy}
+                rel="noopener noreferrer"
+                color="orange"
+                variant="default"
+                size="md"
+                className={classes.control}
+              >
+                Inspired by
+              </Button>
+            )}
           </div>
         </div>
       </div>

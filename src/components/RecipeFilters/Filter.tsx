@@ -4,7 +4,6 @@ import {
   Group,
   SimpleGrid,
   Text,
-  Tree,
   TreeSelect,
   TreeSelectProps,
 } from "@mantine/core";
@@ -26,7 +25,16 @@ export function Filter({ recipeType }: { recipeType?: string }) {
     // attributes
     freezable: (item) => item.filters.attributes.freezable,
     hotWeatherFriendly: (item) => item.filters.attributes.hotWeatherFriendly,
-    barnRecipe: (item) => item.filters.attributes.barnRecipe,
+    // attributes — author (derived from scopedData, one tag per distinct named author)
+    ...Object.fromEntries(
+      scopedData.flatMap((item) => {
+        const author = item.filters.attributes.author;
+        if (!author) return [];
+        return [
+          [`author:${author}`, (i: (typeof data)[number]) => i.filters.attributes.author === author],
+        ];
+      }),
+    ),
     // dietaries — boolean flags (dairyFree, glutenFree, etc.), generated from the same
     // booleanDietaryKeys list that Tree.tsx uses to build the tree, so the two can't drift.
     ...Object.fromEntries(

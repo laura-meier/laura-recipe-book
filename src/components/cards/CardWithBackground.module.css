@@ -8,7 +8,7 @@
 }
 
 .card {
-  height: 300px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -31,6 +31,7 @@
   line-height: 1.2;
   font-size: 20px;
   background: rgba(255, 165, 0, 0.9);
+  border-radius: var(--mantine-radius-sm);
   padding: 0px 4px;
   display: inline;
   box-decoration-break: clone;
@@ -41,6 +42,7 @@
   color: var(--mantine-color-white);
   font-weight: 700;
   background: rgba(255, 165, 0, 0.8);
+  border-radius: var(--mantine-radius-sm);
   padding: 0px 4px;
   display: inline;
   box-decoration-break: clone;

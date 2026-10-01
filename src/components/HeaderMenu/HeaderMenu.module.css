@@ -2,8 +2,11 @@
   height: 56px;
   /* margin-bottom: 120px; */
   background-color: var(--mantine-color-body);
-  border-bottom: 1px solid
-    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100000000;
 }
 
 .inner {
@@ -23,18 +26,20 @@
   font-size: var(--mantine-font-size-sm);
   font-weight: 500;
 
-  @media (max-width: $mantine-breakpoint-sm) {
-    border-radius: 0;
-    padding: var(--mantine-spacing-md);
-    width: 100%;
-  }
-
   @mixin hover {
-    background-color: light-dark(
-      var(--mantine-color-gray-0),
-      var(--mantine-color-dark-6)
-    );
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
   }
+}
+
+/* Used for nav links inside the mobile Drawer, which only ever renders
+   below the "sm" breakpoint — styled directly rather than keyed off a
+   media query so it can't drift out of sync with Mantine's hiddenFrom/
+   visibleFrom breakpoint (see HeaderMenu.tsx). */
+.drawerLink {
+  composes: link;
+  border-radius: 0;
+  padding: var(--mantine-spacing-md);
+  width: 100%;
 }
 
 .subLink {
@@ -46,10 +51,7 @@
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
 
   @mixin hover {
-    background-color: light-dark(
-      var(--mantine-color-gray-0),
-      var(--mantine-color-dark-6)
-    );
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
   }
 }
 

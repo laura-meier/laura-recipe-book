@@ -1,9 +1,9 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 import chickenPastaBakeImg from "../../assets/chicken-pasta-bake-cropped.jpg";
 
 export const chickenPastaBake: Recipe = {
   path: "/chicken-pasta-bake",
-  originalLink: "https://www.bbcgoodfood.com/recipes/chicken-pasta-bake",
+  inspiredBy: "https://www.bbcgoodfood.com/recipes/chicken-pasta-bake",
   image: chickenPastaBakeImg,
   imageAlt: "Chicken pasta bake topped with golden melted cheese",
   title: "Chicken pasta bake",
@@ -43,7 +43,7 @@ export const chickenPastaBake: Recipe = {
     attributes: {
       freezable: true,
       hotWeatherFriendly: false,
-      barnRecipe: false,
+      author: "",
     },
     dietaries: {
       dietaryNotes: "",

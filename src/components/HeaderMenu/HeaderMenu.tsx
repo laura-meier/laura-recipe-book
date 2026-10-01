@@ -23,7 +23,6 @@ const recipeLinks = data.map((item) => ({
 }));
 
 const links: { label: string; link?: string; links?: { link: string; label: string }[] }[] = [
-  // { label: "Home", link: "/" },
   { label: "Home", link: "/" },
   { label: "Main Meals", link: "/main-meal-recipes" },
   { label: "Baking", link: "/baking-recipes" },
@@ -33,22 +32,6 @@ const links: { label: string; link?: string; links?: { link: string; label: stri
     link: "/recipe-library",
     links: [{ link: "/recipe-library", label: "All Recipes" }, ...recipeLinks],
   },
-  // { label: "About", link: "/about" },
-  // {
-  //   label: "Components",
-  //   link: "/components",
-  //   links: [
-  //     { link: "/carousel", label: "Carousel" },
-  //     { link: "/colours", label: "Colours" },
-  //     { link: "/faq", label: "FAQ" },
-  //     { link: "/gradients", label: "Gradients" },
-  //     { link: "/grid", label: "Grid" },
-  //   ],
-  // },
-  // {
-  //   label: "Contact",
-  //   link: "/contact",
-  // },
 ];
 
 export function HeaderMenu() {
@@ -111,19 +94,19 @@ export function HeaderMenu() {
         onClose={close}
         size="100%"
         padding="md"
-        title="Navigation"
+        // title="Navigation"
         hiddenFrom="sm"
         zIndex={1000000}
       >
         <ScrollArea h="calc(100vh - 80px" mx="-md">
-          <Divider my="sm" />
+          {/* <Divider my="sm" /> */}
           {links.map((link) => {
             if (link.links) {
               return <DrawerLinksGroup key={link.label} link={link} />;
             }
 
             return (
-              <a key={link.label} href={link.link} className={classes.link}>
+              <a key={link.label} href={link.link} className={classes.drawerLink}>
                 {link.label}
               </a>
             );
@@ -147,7 +130,7 @@ const DrawerLinksGroup = ({
 
   return (
     <>
-      <UnstyledButton className={classes.link} onClick={toggle}>
+      <UnstyledButton className={classes.drawerLink} onClick={toggle}>
         <Center inline>
           <span className={classes.linkLabel}>{link.label}</span>
           <IconChevronDown size={14} stroke={1.5} />

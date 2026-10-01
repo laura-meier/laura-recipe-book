@@ -1,8 +1,8 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 
 export const chickenCaesarSaladWrap: Recipe = {
   path: "/chicken-caesar-salad-wrap",
-  originalLink: "",
+  inspiredBy: "",
   image: "https://i.pinimg.com/originals/15/ad/46/15ad46012040bcd7eab776f7d10a24f5.jpg",
   imageAlt:
     "A bowl of tossed chicken, bacon, croutons and lettuce, with a healthy amount of parmesan grated on top",
@@ -24,7 +24,7 @@ export const chickenCaesarSaladWrap: Recipe = {
     attributes: {
       freezable: false,
       hotWeatherFriendly: true,
-      barnRecipe: true,
+      author: "Barn",
     },
     dietaries: {
       dietaryNotes: "",

@@ -8,7 +8,7 @@ type Details =
 interface Attributes {
   freezable: boolean;
   hotWeatherFriendly: boolean;
-  barnRecipe: boolean;
+  author: string;
 }
 
 interface MakeItVegan {
@@ -69,7 +69,7 @@ interface Filters {
 
 export interface Recipe {
   path: string;
-  originalLink: string;
+  inspiredBy: string;
   image: string;
   imageAlt: string;
   title: string;

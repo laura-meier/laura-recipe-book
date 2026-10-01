@@ -1,8 +1,8 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 
 export const lentilGnocchiRagu: Recipe = {
   path: "/lentil-gnocchi-ragu",
-  originalLink: "https://www.bbc.co.uk/food/recipes/saucy_lentil_gnocchi_rag_84948",
+  inspiredBy: "https://www.bbc.co.uk/food/recipes/saucy_lentil_gnocchi_rag_84948",
   image:
     "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/saucy_lentil_gnocchi_rag_84948_16x9.jpg",
   imageAlt: "Serving bowl of lentil gnocchi ragu with basil and parmesan sprinkled on top",
@@ -52,7 +52,7 @@ export const lentilGnocchiRagu: Recipe = {
     attributes: {
       freezable: true,
       hotWeatherFriendly: false,
-      barnRecipe: false,
+      author: "",
     },
     dietaries: {
       dietaryNotes: "",

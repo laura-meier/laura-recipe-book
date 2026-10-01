@@ -5,10 +5,12 @@ export function HomeTitle() {
   return (
     <Center className={classes.container}>
       <Title className={classes.title} ta="center">
-        <Text inherit variant="gradient" component="span" gradient={{ from: "red", to: "orange" }}>
-          What to cook today?
-        </Text>
+        Laura's recipe book
       </Title>
+      <Text>
+        A collation of <a href="/recipe-library">all my favourite recipes</a>, with a focus on
+        batch-cook meals that freeze well for easy weekday lunches and dinners.
+      </Text>
     </Center>
   );
 }

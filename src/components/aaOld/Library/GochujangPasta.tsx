@@ -1,8 +1,8 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 
 export const gochujangPasta: Recipe = {
   path: "/gochujang-pasta",
-  originalLink: "https://www.mealofjoy.com/p/sausage-gochujang-pasta",
+  inspiredBy: "https://www.mealofjoy.com/p/sausage-gochujang-pasta",
   image:
     "https://substackcdn.com/image/fetch/$s_!I9KH!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb65a86b1-15e6-4b19-90ce-74f833391e7f_3024x3442.jpeg",
   imageAlt: "",
@@ -47,7 +47,7 @@ export const gochujangPasta: Recipe = {
     attributes: {
       freezable: true,
       hotWeatherFriendly: false,
-      barnRecipe: false,
+      author: "",
     },
     dietaries: {
       dietaryNotes: "",

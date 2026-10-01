@@ -29,9 +29,9 @@ export function Carousel({ recipeType }: { recipeType?: string }) {
       flex={1}
       classNames={classes}
       type="container"
-      slideSize={{ base: "100%", "300px": "50%", "500px": "33.333333%" }}
-      slideGap={{ base: 0, "300px": "md", "500px": "lg" }}
-      emblaOptions={{ loop: true, align: "start", slidesToScroll: mobile ? 1 : 2 }}
+      slideSize={{ base: "90%", "300px": "80%", "500px": 270 }}
+      slideGap={{ base: "sm", "300px": "md", "500px": "lg" }}
+      emblaOptions={{ loop: true, align: "start", slidesToScroll: 1 }}
       nextControlProps={{ "aria-label": "Next slide" }}
       previousControlProps={{ "aria-label": "Previous slide" }}
       plugins={[autoplay.current]}

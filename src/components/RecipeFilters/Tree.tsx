@@ -25,6 +25,7 @@ export function filterOptions(recipes: Recipe[], recipeType?: string): TreeNodeD
       r.filters.details.type === "main meal" ? r.filters.details.cookingMethod : [],
     ),
   );
+  const authors = unique(recipes.flatMap((r) => (r.filters.attributes.author ? [r.filters.attributes.author] : [])));
 
   const nodes: TreeNodeData[] = [
     {
@@ -37,7 +38,11 @@ export function filterOptions(recipes: Recipe[], recipeType?: string): TreeNodeD
           label: "Hot weather friendly",
           nodeProps: { icon: <IconSunHigh /> },
         },
-        { value: "barnRecipe", label: "Recipe by Barn" },
+        {
+          value: "author",
+          label: "Author",
+          children: authors.map((author) => ({ value: `author:${author}`, label: author })),
+        },
       ],
     },
     {

@@ -1,8 +1,8 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 
 export const bakedTortillaCrisps: Recipe = {
   path: "/baked-tortilla-crisps",
-  originalLink: "",
+  inspiredBy: "",
   image: "https://d1da880v85k5s1.cloudfront.net/8d9kdsuvlw0ss.jpg",
   imageAlt: "Golden, crispy baked tortilla triangles sprinkled with salt",
   title: "Baked tortilla crisps",
@@ -23,7 +23,7 @@ export const bakedTortillaCrisps: Recipe = {
   ],
   filters: {
     attributes: {
-      barnRecipe: true,
+      author: "",
       freezable: false,
       hotWeatherFriendly: true,
     },

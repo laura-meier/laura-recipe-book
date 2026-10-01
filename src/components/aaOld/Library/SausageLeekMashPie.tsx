@@ -1,8 +1,8 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 
 export const sausageLeekMashPie: Recipe = {
   path: "/sausage-leek-mash-pie",
-  originalLink: "https://www.bbcgoodfood.com/recipes/sausage-leek-mash-pie",
+  inspiredBy: "https://www.bbcgoodfood.com/recipes/sausage-leek-mash-pie",
   image:
     "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/sausage-leek-mash-pie-07a67d4.jpg?quality=90&webp=true&resize=440,400",
   imageAlt:
@@ -41,7 +41,7 @@ export const sausageLeekMashPie: Recipe = {
     attributes: {
       freezable: true,
       hotWeatherFriendly: false,
-      barnRecipe: false,
+      author: "",
     },
     dietaries: {
       dietaryNotes: "",

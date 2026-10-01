@@ -1,8 +1,8 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 
 export const sausageCourgettePilaf: Recipe = {
   path: "/sausage-courgette-pilaf",
-  originalLink: "https://www.bbcgoodfoodme.com/recipes/easy-sausage-courgette-pilaf/",
+  inspiredBy: "https://www.bbcgoodfoodme.com/recipes/easy-sausage-courgette-pilaf/",
   image:
     "https://www.bbcgoodfoodme.com/assets/legacy/recipe/recipe-image/2020/07/sausagecourgette-pilaf.jpg",
   imageAlt: "",
@@ -39,7 +39,7 @@ export const sausageCourgettePilaf: Recipe = {
     attributes: {
       freezable: true,
       hotWeatherFriendly: false,
-      barnRecipe: false,
+      author: "",
     },
     dietaries: {
       dietaryNotes: "",

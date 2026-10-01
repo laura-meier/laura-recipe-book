@@ -1,8 +1,8 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 
 export const template: Recipe = {
   path: "/",
-  originalLink: "",
+  inspiredBy: "",
   image: "",
   imageAlt: "",
   title: "",
@@ -18,7 +18,7 @@ export const template: Recipe = {
     attributes: {
       freezable: false,
       hotWeatherFriendly: false,
-      barnRecipe: false,
+      author: "",
     },
     dietaries: {
       dietaryNotes: "",

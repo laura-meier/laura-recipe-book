@@ -5,13 +5,13 @@ import aubergineVeggieChilliImg from "../../assets/aubergine-chilli.jpg";
 const unsortedData: Recipe[] = [
   {
     path: "/aubergine-veggie-chilli",
-    originalLink: "https://www.bbcgoodfood.com/recipes/burnt-aubergine-veggie-chilli",
+    inspiredBy: "https://www.bbcgoodfood.com/recipes/burnt-aubergine-veggie-chilli",
     image: aubergineVeggieChilliImg,
     imageAlt: "A yellow and red plate with a pile of rice topped with a vegetable chilli.",
     title: "Aubergine Veggie Chilli",
     time: "1 hr 30",
     description: "This warming aubergine chilli is filled with veggies and freezes well.",
-    serves: 8,
+    serves: 12,
     ingredients: [
       [4, " aubergines, cut into 2cm chunks"],
       [3, " red/orange/yellow peppers, deseeded and cut into 2cm chunks"],
@@ -30,7 +30,8 @@ const unsortedData: Recipe[] = [
       [4, " tsp smoked paprika"],
       [2, " tsp ground coriander"],
       [2, " tsp ground cinnamon"],
-      [3, " cups rice"],
+      [4, " cups rice"],
+      [2, " tbsp lime juice"],
       [0, "Salt"],
       [0, "Pepper"],
       [0, "Olive oil"],
@@ -55,7 +56,7 @@ const unsortedData: Recipe[] = [
       attributes: {
         freezable: true,
         hotWeatherFriendly: false,
-        barnRecipe: false,
+        author: "",
       },
       dietaries: {
         dietaryNotes:
@@ -78,7 +79,7 @@ const unsortedData: Recipe[] = [
   },
   {
     path: "/baked-tortilla-crisps",
-    originalLink: "",
+    inspiredBy: "https://www.bbc.co.uk/food/recipes/baked_tortilla_crisps_65727",
     image: "https://d1da880v85k5s1.cloudfront.net/8d9kdsuvlw0ss.jpg",
     imageAlt: "Golden, crispy baked tortilla triangles sprinkled with salt",
     title: "Baked tortilla crisps",
@@ -99,7 +100,7 @@ const unsortedData: Recipe[] = [
     ],
     filters: {
       attributes: {
-        barnRecipe: true,
+        author: "",
         freezable: false,
         hotWeatherFriendly: true,
       },
@@ -126,7 +127,7 @@ const unsortedData: Recipe[] = [
   },
   {
     path: "/cassoulet",
-    originalLink:
+    inspiredBy:
       "https://www.waitrose.com/ecom/recipe/summer-veg-bacon-cassoulet?srsltid=AfmBOorEAYEGF5ACVVMPyB0U7wzypcdICXb_pp0mLghy4yfruC2lP8Ug",
     image:
       "https://waitrose-prod.scene7.com/is/image/waitroseprod/summer-veg-and-bacon-cassoulet?uuid=cdb282f7-d972-4d21-94e7-9720a19c98d6&$Waitrose-Image-Preset-90$&wid=2400&fit=constrain%2C0",
@@ -153,7 +154,7 @@ const unsortedData: Recipe[] = [
       [1, " lemon, cut into wedges, to serve"],
     ],
     method: [
-      "Preheat the oven to 220°C, gas mark 7. Spread the aubergines and peppers out in a single layer over 1 or 2 roasting tins, drizzle generously with 5 tbsp oil and toss to coat. Spread out again, then season and roast for 35-40 minutes, turning once, until golden and caramelised.",
+      "Preheat the oven to 220°C, gas mark 7. Spread the aubergines and peppers out in a single layer over 1 or 2 roasting tins, drizzle generously with 5 tbsp oil, season with salt and pepper, then toss to coat. Spread out again and roast for 35-40 minutes, turning once, until golden and caramelised.",
       "Meanwhile, heat 2 tbsp oil in a wide ovenproof shallow casserole and place over a medium-high heat. Fry the lardons for 10 minutes, until crisp and golden, then remove with a slotted spoon, leaving the fat in the pan.",
       "Fry the onion in the fat for 8-10 minutes, stirring often, until softened with a little colour, then add the garlic and fry for 2 minutes more. Set aside until needed.",
       "When the roasted vegetables are ready, add the tomatoes, beans, rosemary, water and stock cubes to the onion pan and bring to a simmer. Add the roasted vegetables, season well, then transfer, uncovered, to the oven. Bake for 20 minutes, until the tops of the vegetables and beans are deep golden and a little crisp. Scatter the cassoulet with the basil, then serve with garlic-rubbed toast, if liked, and lemon wedges for squeezing.",
@@ -169,7 +170,7 @@ const unsortedData: Recipe[] = [
       attributes: {
         freezable: true,
         hotWeatherFriendly: false,
-        barnRecipe: false,
+        author: "",
       },
       dietaries: {
         dietaryNotes: "",
@@ -215,8 +216,62 @@ const unsortedData: Recipe[] = [
     },
   },
   {
+    path: "/cherry-tomato-sauce",
+    inspiredBy: "https://www.forkknifeswoon.com/quick-roasted-cherry-tomato-sauce/",
+    image: "https://d1da880v85k5s1.cloudfront.net/8d9kdsuvlw0ss.jpg",
+    imageAlt: "Cherry tomato and onion sauce, with a glossy finish",
+    title: "Cherry tomato sauce",
+    time: "1 hr",
+    description:
+      "A simple but effective use of excess cherry tomatoes (or worth buying them for if you haven't the patience for watering the plants for months!). Add pasta for a basic weeknight dinner.",
+    serves: 2,
+    ingredients: [
+      [400, "g cherry tomatoes"],
+      [1, " small onion, chopped"],
+      [0, "Garlic granules"],
+      [0, "Dried basil"],
+      [0, "Dried thyme"],
+      [0, "Olive oil"],
+      [0, "Salt"],
+      [0, "Pepper"],
+    ],
+    method: [
+      "Preheat the oven to 200C/180C Fan/Gas 4.",
+      "Put the cherry tomatoes into a large bakng tray, add a generous amount of oil and season well with salt and pepper. Cook for around 30-40 mins, until the tomatoes have burst and start shrivelling.",
+      "Meanwhile, put some olive oil in a pan on medium heat, then add the chopped onion. Fry for 5 mins until soft.",
+      "Add the tomatoes and then add garlic granules, dried basil, dried thyme, salt and pepper as desired.",
+      "if cooking pasta, add some cooked pasta water too.",
+    ],
+    filters: {
+      attributes: {
+        author: "",
+        freezable: true,
+        hotWeatherFriendly: false,
+      },
+      details: {
+        type: "other",
+      },
+      dietaries: {
+        dietaryNotes: "",
+        dairyFree: true,
+        eggFree: true,
+        halal: true,
+        fishFree: true,
+        glutenFree: true,
+        kosher: true,
+        lactoseFree: true,
+        nutFree: true,
+        shellfishFree: true,
+        soyFree: true,
+        pescatarian: true,
+        vegetarian: true,
+        vegan: true,
+      },
+    },
+  },
+  {
     path: "/chicken-pasta-bake",
-    originalLink: "https://www.bbcgoodfood.com/recipes/chicken-pasta-bake",
+    inspiredBy: "https://www.bbcgoodfood.com/recipes/chicken-pasta-bake",
     image: chickenPastaBakeImg,
     imageAlt: "Chicken pasta bake topped with golden melted cheese",
     title: "Chicken pasta bake",
@@ -256,7 +311,7 @@ const unsortedData: Recipe[] = [
       attributes: {
         freezable: true,
         hotWeatherFriendly: false,
-        barnRecipe: false,
+        author: "",
       },
       dietaries: {
         dietaryNotes: "",
@@ -279,7 +334,7 @@ const unsortedData: Recipe[] = [
   },
   {
     path: "/chicken-caesar-salad-wrap",
-    originalLink: "",
+    inspiredBy: "",
     image: "https://i.pinimg.com/originals/15/ad/46/15ad46012040bcd7eab776f7d10a24f5.jpg",
     imageAlt:
       "A bowl of tossed chicken, bacon, croutons and lettuce, with a healthy amount of parmesan grated on top",
@@ -301,7 +356,7 @@ const unsortedData: Recipe[] = [
       attributes: {
         freezable: false,
         hotWeatherFriendly: true,
-        barnRecipe: true,
+        author: "Barn",
       },
       dietaries: {
         dietaryNotes: "",
@@ -324,7 +379,7 @@ const unsortedData: Recipe[] = [
   },
   {
     path: "/french-dressing",
-    originalLink: "https://www.bbcgoodfood.com/howto/guide/10-salad-dressings-you-can-make-minutes",
+    inspiredBy: "https://www.bbcgoodfood.com/howto/guide/10-salad-dressings-you-can-make-minutes",
     image:
       "https://images.immediate.co.uk/production/volatile/sites/30/2016/08/French-dressing-a881090.jpg?quality=90&webp=true&fit=975,649",
     imageAlt:
@@ -351,7 +406,7 @@ const unsortedData: Recipe[] = [
       attributes: {
         freezable: false,
         hotWeatherFriendly: true,
-        barnRecipe: false,
+        author: "",
       },
       dietaries: {
         dietaryNotes: "",
@@ -373,39 +428,36 @@ const unsortedData: Recipe[] = [
   },
   {
     path: "/gochujang-pasta",
-    originalLink: "https://www.mealofjoy.com/p/sausage-gochujang-pasta",
+    inspiredBy: "https://www.mealofjoy.com/p/sausage-gochujang-pasta",
     image:
       "https://substackcdn.com/image/fetch/$s_!I9KH!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb65a86b1-15e6-4b19-90ce-74f833391e7f_3024x3442.jpeg",
     imageAlt: "",
     title: "Sausage gochujang pasta",
-    time: "1 hr",
-    description: "",
-    serves: 4,
+    time: "50 mins",
+    description: "Spicy gochujang and creamy sausage pasta is a match made in heaven.",
+    serves: 10,
     ingredients: [
-      [400, "g pasta (rigatoni or any short pasta)"],
-      [6, " high-quality sausages (about 320g)"],
-      [30, "g butter"],
-      [1, " shallot"],
-      [3, " garlic cloves"],
-      [2, " tbsp gochujang paste"],
-      [220, "ml cream"],
-      [2, " limes"],
-      [2, " tbsp honey"],
-      [30, "g coriander"],
-      [15, "g panko breadcrumbs"],
-      [40, "g parmesan"],
-      [0, "Salt"],
-      [0, "Pepper"],
+      [1000, "g pasta (rigatoni or any short pasta)"],
+      [12, " high-quality sausages (about 320g)"],
+      [2, " medium onions"],
+      [2, " tsp garlic granules"],
+      [5, " tbsp gochujang paste"],
+      [400, "ml cream"],
+      [2, " tbsp lime juice"],
+      [3, " tbsp honey"],
+      [50, "g coriander"],
+      [50, "g parmesan"],
+      [300, "g frozen peas"],
       [0, "Olive oil"],
     ],
     method: [
-      "Remove the casing from the sausages and fry them in a pan or wok with a little oil over medium-high heat until they are golden brown. Remove from the pan and set aside.",
-      "Add the butter, and when it starts to melt, add the shallot and garlic. Sauté for a couple of minutes until softened, then add the gochujang and cream.",
-      "Stir in 30g of Parmesan cheese, the juice of two limes, and the honey. Let it simmer for about 3 minutes, then put the crispy sausage pieces back in. Stir everything well and let it simmer a bit more until it thickens slightly. Season with salt and pepper to taste.",
-      "Cook the pasta. Once it's al dente, drain it and save a little bit of the cooking water. Add a small ladle of the cooking water to your pan and mix until the sauce becomes glossy. Keep tasting and add more water if needed.",
-      "Add almost all the chopped cilantro to the pasta and mix, reserving some for the topping.",
-      "Heat a tablespoon of olive oil in a pan and toast the panko breadcrumbs. Remove from heat, let cool slightly, grate 10g of Parmesan over it, and mix in the remaining chopped cilantro.",
-      "Plate the pasta with the crunchy cilantro topping and a little lime zest.",
+      "Remove the casing from the sausages and fry them in olive oil in a large pan or casserole dish over medium-high heat. Mash them with a spatula or wooden spoon so they break up, then cook through. Remove from the pan and set aside.",
+      "Add more oil, then fry the onion with the garlic granules for 5-10 minutes until softened.",
+      "Now add the gochujang, cream, grated parmesan cheese, lime juice, honey. Let it simmer for 3 minutes, then add the sausage pieces back in.",
+      "Stir everything well and let it simmer a bit more until it thickens slightly. Season with salt and pepper to taste (if needed - I prefer not to).",
+      "Cook the pasta. Once it's al dente, save some of the pasta water then drain it. Add a small ladle of the cooking water to your pan and mix until the sauce becomes glossy. Keep tasting and add more water if needed.",
+      "Add the frozen peas, and most of the chopped coriander to the pasta and mix until the peas have defrosted (don't overcook, peas are best fresh).",
+      "Serve the pasta with the rest of the parmesan and coriander.",
     ],
     filters: {
       details: {
@@ -418,7 +470,7 @@ const unsortedData: Recipe[] = [
       attributes: {
         freezable: true,
         hotWeatherFriendly: false,
-        barnRecipe: false,
+        author: "",
       },
       dietaries: {
         dietaryNotes: "",
@@ -441,7 +493,7 @@ const unsortedData: Recipe[] = [
   },
   {
     path: "/greek-pasta-salad",
-    originalLink: "https://www.bbc.co.uk/food/recipes/greek_pasta_salad_15496",
+    inspiredBy: "https://www.bbc.co.uk/food/recipes/greek_pasta_salad_15496",
     image:
       "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/greek_pasta_salad_15496_16x9.jpg",
     imageAlt:
@@ -471,7 +523,7 @@ const unsortedData: Recipe[] = [
     ],
     filters: {
       attributes: {
-        barnRecipe: false,
+        author: "",
         freezable: false,
         hotWeatherFriendly: true,
       },
@@ -523,8 +575,67 @@ const unsortedData: Recipe[] = [
     },
   },
   {
+    path: "/lamingtons",
+    inspiredBy: "https://www.recipetineats.com/classic-lamingtons/",
+    image: "https://tse4.mm.bing.net/th/id/OIP.TGz02e3VrwgeVD0g1UzX_wHaJQ?r=0&pid=Api",
+    imageAlt:
+      "Squares of Australian lamingtons, a sponge cake covered in chocolate and coconut shavings",
+    title: "Lamingtons",
+    time: "45 mins",
+    description:
+      "Lamingtons are an Australian cake, which takes a classic sponge, covers it in chocolate and coconut shavings.",
+    serves: 12,
+    ingredients: [
+      [0, "tbc"],
+      [200, "g vegan margarine"],
+      [150, "g caster sugar"],
+      [100, "g soft brown sugar"],
+      [1, " teaspoon vanilla extract"],
+      [320, "g self-raising flour"],
+      [250, "g vegan chocolate chips or vegan dark chocolate chopped up"],
+      [0, " Splash plant-based milk"],
+    ],
+    method: [
+      'Preheat your oven to 180°C/160°C Fan. Line an 8x10"/20x25cm tin with baking paper or wipe the tin with the vegan margarine. Letting some hang over the edges allows for easy removal.',
+      "In a large bowl, mix together the margarine, caster sugar and brown sugar. Add in the vanilla and mix again.",
+      "Next, add all of the flour to the bowl. Mix it in and when it starts to stick together, use your hands to press it into a dough. If the dough is crumbly, add a small splash of plant-based milk to help it stick together. I used about 2 teaspoons.",
+      "Once your dough is the right consistency, add in the chocolate chips, saving a handful for the top. Gently fold them in using your hands.",
+      "Place the cookie dough into your lined baking tin and press it out to the edges as evenly as you can. Gently press in the remaining chocolate chips.",
+      "Bake for 25 minutes or until the top is light golden brown. Leave it in the tin to cool completely.",
+      "Once cool, place it in the fridge for 2 hours. This will help it to firm up quicker and prevent the cookie squares from crumbling.",
+      "After refrigerating, cut the cookie into 12 equal-sized squares and enjoy!",
+    ],
+    filters: {
+      attributes: {
+        author: "",
+        freezable: true,
+        hotWeatherFriendly: false,
+      },
+      details: {
+        type: "baking",
+      },
+      dietaries: {
+        dietaryNotes:
+          "Ensure all chocolate chips and plant-based milk brands used are certified gluten-free/nut-free if catering for strict allergies.",
+        dairyFree: true,
+        eggFree: true,
+        halal: true,
+        fishFree: true,
+        glutenFree: false,
+        kosher: true,
+        lactoseFree: true,
+        nutFree: true,
+        shellfishFree: true,
+        soyFree: true,
+        pescatarian: true,
+        vegetarian: true,
+        vegan: true,
+      },
+    },
+  },
+  {
     path: "/lentil-gnocchi-ragu",
-    originalLink: "https://www.bbc.co.uk/food/recipes/saucy_lentil_gnocchi_rag_84948",
+    inspiredBy: "https://www.bbc.co.uk/food/recipes/saucy_lentil_gnocchi_rag_84948",
     image:
       "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/saucy_lentil_gnocchi_rag_84948_16x9.jpg",
     imageAlt: "Serving bowl of lentil gnocchi ragu with basil and parmesan sprinkled on top",
@@ -574,7 +685,7 @@ const unsortedData: Recipe[] = [
       attributes: {
         freezable: true,
         hotWeatherFriendly: false,
-        barnRecipe: false,
+        author: "",
       },
       dietaries: {
         dietaryNotes: "",
@@ -632,7 +743,7 @@ const unsortedData: Recipe[] = [
   },
   {
     path: "/sausage-bolognese",
-    originalLink: "https://www.bbc.co.uk/food/recipes/spicy_sausage_pasta_42455",
+    inspiredBy: "https://www.bbc.co.uk/food/recipes/spicy_sausage_pasta_42455",
     image:
       "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/spicy_sausage_pasta_42455_16x9.jpg",
     imageAlt: "",
@@ -670,7 +781,7 @@ const unsortedData: Recipe[] = [
       attributes: {
         freezable: true,
         hotWeatherFriendly: false,
-        barnRecipe: false,
+        author: "",
       },
       dietaries: {
         dietaryNotes: "",
@@ -693,31 +804,35 @@ const unsortedData: Recipe[] = [
   },
   {
     path: "/sausage-courgette-pilaf",
-    originalLink: "https://www.bbcgoodfoodme.com/recipes/easy-sausage-courgette-pilaf/",
+    inspiredBy: "https://www.bbcgoodfoodme.com/recipes/easy-sausage-courgette-pilaf/",
     image:
       "https://www.bbcgoodfoodme.com/assets/legacy/recipe/recipe-image/2020/07/sausagecourgette-pilaf.jpg",
     imageAlt: "",
     title: "Sausage & courgette pilaf",
-    time: "1 hr 20",
+    time: "1 hr",
     description:
-      "Whip up this speedy sausage, courgette and rice dish in just 20 minutes. Full of flavour, it's ideal for when you want something quick and easy.",
-    serves: 1,
+      "This sausage, courgette and rice dish is simple but full of flavour, and freezes well.",
+    serves: 9,
     ingredients: [
-      [100, "g basmati rice"],
-      [1, " tsp vegetable oil"],
-      [3, " sausages, meat squeezed from the skins"],
-      [1, " tsp fennel seeds, black onion seeds or crushed coriander seeds"],
-      [1, " courgette, sliced into half-moons"],
-      [100, "g frozen peas"],
-      [200, "ml vegetable stock"],
-      [0, "Small bunch of mint, leaves picked and finely chopped"],
-      [0, "Small bunch of dill, finely chopped"],
-      [2, " tbsp fat-free yogurt"],
+      [3, " cups basmati rice"],
+      [2, " tbsp vegetable oil"],
+      [12, " sausages, meat squeezed from the skins"],
+      [2, " tsp crushed coriander seeds"],
+      [3, " courgettes, sliced into half-moons"],
+      [700, "g frozen peas"],
+      [3, " vegetable stock cubes"],
+      [6.5, " cups water"],
+      [2, " tsp dried mint"],
+      [1, " tsp dried dill"],
+      [2, " tbsp fat-free yogurt, optional"],
     ],
     method: [
-      "Rinse the rice until the water runs clear, then leave to soak. Heat the oil in a medium saucepan with a tight-fitting lid and fry the sausagemeat for 2-3 minutes until crisp and golden. Stir in the seeds and courgette and fry for another 2 minutes over a high heat to evaporate the moisture.",
-      "Add the drained rice, peas, stock and half the chopped herbs. Bring to a simmer, then reduce the heat to low and cover with the lid. Cook for 10-12 minutes until the rice is tender.",
-      "Fold most of the remaining herbs through the rice. Serve topped with the last of the herbs, with the yogurt on the side.",
+      "Heat the oil in a large pan with a lid on a high heat and fry the courgette half-moons and coriander seeds for 5-15 mins until the courgettes go soft and slightly brown.",
+      "Remove the courgettes from the pan and cook the sausage meat until crisp and golden.",
+      "Put the courgettes back into the pan along with the rice, vegetable stock cubes, mint, dill and 6 cups of water.",
+      "Bring to a simmer, then reduce the heat to low and cover with the lid.",
+      "Cook for around 10 mins until the rice is tender, adding more water if required, then add the frozen peas and stir for a minute.",
+      "Optionally serve with fresh herbs and yoghurt on the side.",
     ],
     filters: {
       details: {
@@ -730,7 +845,7 @@ const unsortedData: Recipe[] = [
       attributes: {
         freezable: true,
         hotWeatherFriendly: false,
-        barnRecipe: false,
+        author: "",
       },
       dietaries: {
         dietaryNotes: "",
@@ -753,7 +868,7 @@ const unsortedData: Recipe[] = [
   },
   {
     path: "/sausage-leek-mash-pie",
-    originalLink: "https://www.bbcgoodfood.com/recipes/sausage-leek-mash-pie",
+    inspiredBy: "https://www.bbcgoodfood.com/recipes/sausage-leek-mash-pie",
     image:
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/sausage-leek-mash-pie-07a67d4.jpg?quality=90&webp=true&resize=440,400",
     imageAlt:
@@ -792,7 +907,7 @@ const unsortedData: Recipe[] = [
       attributes: {
         freezable: true,
         hotWeatherFriendly: false,
-        barnRecipe: false,
+        author: "",
       },
       dietaries: {
         dietaryNotes: "",
@@ -810,6 +925,62 @@ const unsortedData: Recipe[] = [
         vegetarian: false,
         vegan: false,
         veganAdjustable: false,
+      },
+    },
+  },
+  {
+    path: "/vegan-choc-chip-cookie-squares",
+    inspiredBy: "https://bakedbyclo.com/vegan-mini-egg-cookie-bars/",
+    image: "https://tse4.mm.bing.net/th/id/OIP.TGz02e3VrwgeVD0g1UzX_wHaJQ?r=0&pid=Api",
+    imageAlt: "Chewy vegan chocolate chip cookie squares baked in a tin",
+    title: "Vegan choc chip cookie squares",
+    time: "45 mins",
+    description: "Chewy square-shaped choc chip cookies",
+    serves: 12,
+    ingredients: [
+      [200, "g vegan margarine"],
+      [150, "g caster sugar"],
+      [100, "g soft brown sugar"],
+      [1, " teaspoon vanilla extract"],
+      [320, "g self-raising flour"],
+      [250, "g vegan chocolate chips or vegan dark chocolate chopped up"],
+      [0, " Splash plant-based milk"],
+    ],
+    method: [
+      'Preheat your oven to 180°C/160°C Fan. Line an 8x10"/20x25cm tin with baking paper or wipe the tin with the vegan margarine. Letting some hang over the edges allows for easy removal.',
+      "In a large bowl, mix together the margarine, caster sugar and brown sugar. Add in the vanilla and mix again.",
+      "Next, add all of the flour to the bowl. Mix it in and when it starts to stick together, use your hands to press it into a dough. If the dough is crumbly, add a small splash of plant-based milk to help it stick together. I used about 2 teaspoons.",
+      "Once your dough is the right consistency, add in the chocolate chips, saving a handful for the top. Gently fold them in using your hands.",
+      "Place the cookie dough into your lined baking tin and press it out to the edges as evenly as you can. Gently press in the remaining chocolate chips.",
+      "Bake for 25 minutes or until the top is light golden brown. Leave it in the tin to cool completely.",
+      "Once cool, place it in the fridge for 2 hours. This will help it to firm up quicker and prevent the cookie squares from crumbling.",
+      "After refrigerating, cut the cookie into 12 equal-sized squares and enjoy!",
+    ],
+    filters: {
+      attributes: {
+        author: "",
+        freezable: true,
+        hotWeatherFriendly: false,
+      },
+      details: {
+        type: "baking",
+      },
+      dietaries: {
+        dietaryNotes:
+          "Ensure all chocolate chips and plant-based milk brands used are certified gluten-free/nut-free if catering for strict allergies.",
+        dairyFree: true,
+        eggFree: true,
+        halal: true,
+        fishFree: true,
+        glutenFree: false,
+        kosher: true,
+        lactoseFree: true,
+        nutFree: true,
+        shellfishFree: true,
+        soyFree: true,
+        pescatarian: true,
+        vegetarian: true,
+        vegan: true,
       },
     },
   },

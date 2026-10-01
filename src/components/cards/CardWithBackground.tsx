@@ -1,4 +1,4 @@
-import { Button, Paper, Text, Title } from "@mantine/core";
+import { Paper, Text, Title } from "@mantine/core";
 import classes from "./CardWithBackground.module.css";
 import { Recipe } from "../RecipeFilters/Types";
 
@@ -8,7 +8,7 @@ export function CardWithBackground(recipe: Recipe) {
     <a href={path} className={classes.link}>
       <Paper
         shadow="md"
-        p="xl"
+        p="md"
         radius="md"
         style={{ backgroundImage: `url(${image})` }}
         className={classes.card}
@@ -17,7 +17,7 @@ export function CardWithBackground(recipe: Recipe) {
           <Title className={classes.title}>{title}</Title>
         </div>
         <div className={`${classes.transparent} ${classes.timeBox}`}>
-          <Text className={classes.time} size="sm">
+          <Text className={classes.time} size="md">
             {time.toLowerCase()}
           </Text>
         </div>

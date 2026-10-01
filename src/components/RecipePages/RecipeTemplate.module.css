@@ -139,9 +139,7 @@ Posted by Liftoff
 Retrieved 2026-06-19, License - CC BY-SA 3.0
 */
 
-/* 800px for tablets and phones.
- */
-@media all and (max-width: 800px) {
+@media (max-width: $mantine-breakpoint-sm) {
   .ingredients,
   .method {
     display: block;

@@ -1,8 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+}
+
 .title {
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  color: orange;
   font-size: rem(100px);
   font-weight: 900;
+  line-height: 1.1;
   letter-spacing: rem(-2px);
+
+  padding: 5px 0px 10px;
 
   @media (max-width: $mantine-breakpoint-md) {
     font-size: rem(50px);

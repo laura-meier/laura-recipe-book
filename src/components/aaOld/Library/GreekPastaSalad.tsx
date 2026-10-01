@@ -1,8 +1,8 @@
-import { Recipe } from "../RecipeFilters/Types";
+import { Recipe } from "@/components/RecipeFilters/Types";
 
 export const greekPastaSalad: Recipe = {
   path: "/greek-pasta-salad",
-  originalLink: "https://www.bbc.co.uk/food/recipes/greek_pasta_salad_15496",
+  inspiredBy: "https://www.bbc.co.uk/food/recipes/greek_pasta_salad_15496",
   image: "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/greek_pasta_salad_15496_16x9.jpg",
   imageAlt:
     "A vibrant Greek pasta salad tossed with cucumbers, quartered cherry tomatoes, crumbled feta, and fresh basil",
@@ -31,7 +31,7 @@ export const greekPastaSalad: Recipe = {
   ],
   filters: {
     attributes: {
-      barnRecipe: false,
+      author: "",
       freezable: false,
       hotWeatherFriendly: true,
     },
