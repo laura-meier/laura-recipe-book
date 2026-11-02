@@ -1,6 +1,0 @@
-.title {
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  font-size: 52px;
-  font-weight: 500;
-  margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
-}

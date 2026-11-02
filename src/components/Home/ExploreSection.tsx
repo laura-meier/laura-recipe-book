@@ -32,11 +32,11 @@ export function ExploreSection() {
         />
         <CarouselSection title={"Baking"} path={"/baking-recipes"} recipeType={"baking"} />
         <CarouselSection title={"Other"} path={"/other-recipes"} recipeType={"other"} />
-        <CarouselSection
+        {/* <CarouselSection
           title={"Vegan main meals"}
           path={"/main-meal-recipes/?dietaries=vegan"}
           recipeType={"main meal"}
-        />
+        /> */}
       </Container>
     </>
   );

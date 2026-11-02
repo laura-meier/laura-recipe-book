@@ -29,9 +29,14 @@ export function Filter({ recipeType }: { recipeType?: string }) {
     ...Object.fromEntries(
       scopedData.flatMap((item) => {
         const author = item.filters.attributes.author;
-        if (!author) return [];
+        if (!author) {
+          return [];
+        }
         return [
-          [`author:${author}`, (i: (typeof data)[number]) => i.filters.attributes.author === author],
+          [
+            `author:${author}`,
+            (i: (typeof data)[number]) => i.filters.attributes.author === author,
+          ],
         ];
       }),
     ),
@@ -55,7 +60,9 @@ export function Filter({ recipeType }: { recipeType?: string }) {
     // details — base / protein / dish (derived from scopedData)
     ...Object.fromEntries(
       scopedData.flatMap((item) => {
-        if (item.filters.details.type !== "main meal") return [];
+        if (item.filters.details.type !== "main meal") {
+          return [];
+        }
         const details = item.filters.details; // narrowed to main meal variant
         return [
           [
@@ -80,7 +87,9 @@ export function Filter({ recipeType }: { recipeType?: string }) {
     // details — cookingMethod (derived from scopedData)
     ...Object.fromEntries(
       scopedData.flatMap((item) => {
-        if (item.filters.details.type !== "main meal") return [];
+        if (item.filters.details.type !== "main meal") {
+          return [];
+        }
         return item.filters.details.cookingMethod.map((m) => [
           `cookingMethod:${m}`,
           (i: (typeof data)[number]) =>
@@ -101,7 +110,7 @@ export function Filter({ recipeType }: { recipeType?: string }) {
     <Group gap="xs">
       {selected && <CheckIcon style={{ width: 12, height: 12 }} />}
       {node.nodeProps?.icon}
-      <Text size="sm">{node.label}</Text>
+      <Text size="sm">{`${node.label} (${filtered.filter((item) => tagMatchers[node.value]?.(item)).length})`}</Text>
     </Group>
   );
 
@@ -111,6 +120,7 @@ export function Filter({ recipeType }: { recipeType?: string }) {
         label="Filter recipes"
         placeholder="Pick filters"
         data={dataArgs}
+        rightSection={`(${filtered.length})`}
         renderNode={renderTreeNode}
         mode="multiple"
         value={selectedTags}
